@@ -72,7 +72,14 @@ const Home = () => {
   const skills = [
     {
       category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
+      items: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vue.js",
+        "HTML/CSS",
+      ],
     },
     {
       category: "Backend",
@@ -157,6 +164,7 @@ const Home = () => {
                 "Next.js",
                 "TypeScript",
                 "Tailwind CSS",
+                "Vue.js",
                 "Node.js",
                 "Python",
                 "Spring Boot",
