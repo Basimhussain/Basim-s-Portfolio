@@ -1,71 +1,59 @@
 import React from "react";
+import { motion } from "framer-motion";
+import AnimatedHeading from "./AnimatedHeading";
 
 interface SectionProps {
   id?: string;
+  number?: string;
+  eyebrow?: string;
   title?: string;
   subtitle?: string;
   children: React.ReactNode;
   className?: string;
-  background?: "default" | "stars" | "nebula";
 }
 
 const Section: React.FC<SectionProps> = ({
   id,
+  number,
+  eyebrow,
   title,
   subtitle,
   children,
   className = "",
-  background = "default",
 }) => {
-  const getBackgroundElements = () => {
-    switch (background) {
-      case "stars":
-        return (
-          <div className="absolute inset-0 opacity-30">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
-                style={{
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`,
-                }}
-              />
-            ))}
-          </div>
-        );
-      case "nebula":
-        return (
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
-    <section id={id} className={`relative py-20 px-6 ${className}`}>
-      {getBackgroundElements()}
-
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {(title || subtitle) && (
-          <div className="text-center mb-16">
-            {title && (
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                {title}
-              </h2>
-            )}
-            {subtitle && (
-              <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-                {subtitle}
-              </p>
+    <section id={id} className={`relative py-24 md:py-32 px-6 ${className}`}>
+      <div className="max-w-7xl mx-auto">
+        {(number || eyebrow) && (
+          <div className="flex items-center gap-3 mb-8">
+            {number && <span className="section-number">{number}</span>}
+            <span className="hairline w-12" />
+            {eyebrow && (
+              <span className="text-[10px] font-mono tracking-widest text-bone/50 uppercase">
+                {eyebrow}
+              </span>
             )}
           </div>
+        )}
+
+        {title && (
+          <AnimatedHeading
+            text={title}
+            as="h2"
+            className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight text-bone mb-6"
+          />
+        )}
+
+        {subtitle && (
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-base md:text-lg text-bone/60 max-w-2xl mb-16 leading-relaxed"
+          >
+            {subtitle}
+          </motion.p>
         )}
 
         {children}

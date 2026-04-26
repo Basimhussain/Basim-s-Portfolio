@@ -1,107 +1,139 @@
 import React, { useState, useEffect } from "react";
-import GlassCard from "./GlassCard";
+import { motion, useScroll, useSpring } from "framer-motion";
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.4,
+  });
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "01", label: "Origin", href: "#hero" },
+    { name: "02", label: "Story", href: "#story" },
+    { name: "03", label: "Work", href: "#work" },
+    { name: "04", label: "Projects", href: "#projects" },
+    { name: "05", label: "Stack", href: "#stack" },
+    { name: "06", label: "Contact", href: "#contact" },
   ];
 
-  const handleNavClick = (href: string) => {
-    setIsMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 p-6 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl" : ""
-      }`}
-    >
-      <GlassCard
-        className={`px-6 py-4 transition-all duration-300 ${
-          scrolled ? "glass-effect-strong" : ""
+    <>
+      <motion.div
+        style={{ scaleX: progress }}
+        className="fixed top-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-gold via-gold-soft to-sand z-[60]"
+      />
+      <motion.nav
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+        className={`fixed top-3 left-3 right-3 z-50 transition-all duration-500 ${
+          scrolled ? "" : ""
         }`}
-        hover={false}
       >
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="text-white font-bold text-xl bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Basim Hussain&apos;s Portfolio
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.href)}
-                className="text-white/80 hover:text-white transition-colors duration-300 relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden relative w-6 h-6 focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <span
-              className={`absolute h-0.5 w-6 bg-white transform transition-all duration-300 ${
-                isMenuOpen ? "rotate-45 top-3" : "top-1"
-              }`}
-            ></span>
-            <span
-              className={`absolute h-0.5 w-6 bg-white transform transition-all duration-300 top-3 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}
-            ></span>
-            <span
-              className={`absolute h-0.5 w-6 bg-white transform transition-all duration-300 ${
-                isMenuOpen ? "-rotate-45 top-3" : "top-5"
-              }`}
-            ></span>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isMenuOpen ? "max-h-64 mt-6" : "max-h-0"
+          className={`mx-auto max-w-6xl rounded-full transition-all duration-500 ${
+            scrolled
+              ? "glass-strong px-4 py-2.5"
+              : "bg-transparent px-4 py-3 border border-transparent"
           }`}
         >
-          <div className="space-y-4">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left text-white/80 hover:text-white transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-white/10"
-              >
-                {item.name}
-              </button>
-            ))}
+          <div className="flex items-center justify-between">
+            <a
+              href="#hero"
+              className="flex items-center gap-3 text-bone group"
+            >
+              <span className="relative inline-flex items-center justify-center w-10 h-10 rounded-full border border-gold/40 text-gold text-sm font-mono group-hover:bg-gold/10 transition-colors">
+                BH
+                <span className="absolute -inset-1 rounded-full border border-gold/20 animate-spin-slow" />
+              </span>
+              <span className="hidden sm:flex flex-col leading-tight">
+                <span className="text-[14px] font-mono tracking-widest text-bone/80">
+                  BASIM HUSSAIN
+                </span>
+                <span className="text-[11px] tracking-widest text-gold/80 mt-0.5">
+                  AI · ENGINEER · RIYADH
+                </span>
+              </span>
+            </a>
+
+            <div className="hidden md:flex items-center gap-7">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="group flex items-baseline gap-2 text-bone/75 hover:text-bone transition-colors duration-300"
+                >
+                  <span className="text-[12px] font-mono text-gold/70 group-hover:text-gold transition-colors">
+                    {item.name}
+                  </span>
+                  <span className="text-base tracking-wide link-underline">
+                    {item.label}
+                  </span>
+                </a>
+              ))}
+            </div>
+
+            <div className="hidden md:flex items-center gap-2.5">
+              <span className="ticker-dot animate-shimmer" />
+              <span className="text-[12px] font-mono tracking-widest text-bone/75">
+                AVAILABLE FOR WORK
+              </span>
+            </div>
+
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden relative w-9 h-9 flex items-center justify-center"
+              aria-label="Toggle menu"
+            >
+              <span
+                className={`absolute h-px w-5 bg-bone transform transition-all duration-300 ${
+                  isMenuOpen ? "rotate-45" : "-translate-y-1"
+                }`}
+              />
+              <span
+                className={`absolute h-px w-5 bg-bone transform transition-all duration-300 ${
+                  isMenuOpen ? "-rotate-45" : "translate-y-1"
+                }`}
+              />
+            </button>
+          </div>
+
+          <div
+            className={`md:hidden overflow-hidden transition-all duration-500 ${
+              isMenuOpen ? "max-h-96 mt-4" : "max-h-0"
+            }`}
+          >
+            <div className="space-y-1 pb-3">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-baseline gap-3 py-2 px-3 text-bone/80 hover:text-gold hover:bg-bone/5 rounded-lg transition-all"
+                >
+                  <span className="text-[10px] font-mono text-gold/70">
+                    {item.name}
+                  </span>
+                  <span className="text-base">{item.label}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </GlassCard>
-    </nav>
+      </motion.nav>
+    </>
   );
 };
 
