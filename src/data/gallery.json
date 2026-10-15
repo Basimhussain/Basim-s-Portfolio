@@ -1,6 +1,23 @@
 {
  "amc-estimator": [
   {
+   "src": "/work/amc-estimator/hero.webp",
+   "w": 2400,
+   "h": 844,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/amc-estimator/walkthrough.mp4",
+   "poster": "/work/amc-estimator/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "The estimator in use, the Arabic view and the project library."
+  },
+  {
    "src": "/work/amc-estimator/01-hero-english.webp",
    "w": 2400,
    "h": 1500,
@@ -75,6 +92,158 @@
  ],
  "mise": [
   {
+   "src": "/work/mise/hero.webp",
+   "w": 2400,
+   "h": 844,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/mise/walkthrough.mp4",
+   "poster": "/work/mise/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "A short silent walkthrough of the product."
+  },
+  {
+   "src": "/work/mise/marketing-site.mp4",
+   "poster": "/work/mise/marketing-site-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Marketing site walkthrough",
+   "caption": "The live product widgets, the story sections, the features page and the Arabic view."
+  },
+  {
+   "src": "/work/mise/01-owner-dashboard.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner dashboard",
+   "caption": "Owner console overview, light, English. Week stats (orders, average order value, occupancy) and revenue line chart."
+  },
+  {
+   "src": "/work/mise/02-owner-reservations.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner reservations",
+   "caption": "Reservations panel for today with guest, party size, status, source, table and confirmation code."
+  },
+  {
+   "src": "/work/mise/03-owner-floor-plan.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner floor plan",
+   "caption": "Floor plan editor for the Main Hall zone with placed tables and decor tools."
+  },
+  {
+   "src": "/work/mise/04-owner-attendance.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner attendance",
+   "caption": "Attendance and payroll panel with hours per staff member."
+  },
+  {
+   "src": "/work/mise/05-owner-analytics-dark.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner analytics dark",
+   "caption": "Same analytics dashboard in dark mode."
+  },
+  {
+   "src": "/work/mise/06-owner-ai-forecast.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner ai forecast",
+   "caption": "Forecast panel with 14 day revenue projection and staffing recommendation table."
+  },
+  {
+   "src": "/work/mise/07-owner-feedback.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner feedback",
+   "caption": "Guest feedback list with star ratings per category and comments."
+  },
+  {
+   "src": "/work/mise/08-owner-dashboard-ar-dark.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner dashboard ar dark",
+   "caption": "Owner overview Arabic, dark mode."
+  },
+  {
+   "src": "/work/mise/09-owner-reservations-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner reservations ar",
+   "caption": "Reservations panel, Arabic right to left."
+  },
+  {
+   "src": "/work/mise/10-owner-floor-plan-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner floor plan ar",
+   "caption": "Floor plan editor, Arabic right to left, Lounge zone."
+  },
+  {
+   "src": "/work/mise/11-kitchen-display-all-stations.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display all stations",
+   "caption": "Kitchen display with eight tickets across hot, cold and bar items in sent, cooking and ready states."
+  },
+  {
+   "src": "/work/mise/12-kitchen-display-bar-station.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display bar station",
+   "caption": "Kitchen display filtered to the Bar station."
+  },
+  {
+   "src": "/work/mise/13-kitchen-display-dark.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display dark",
+   "caption": "Kitchen display, dark mode."
+  },
+  {
+   "src": "/work/mise/14-kitchen-display-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display ar",
+   "caption": "Kitchen display, Arabic right to left."
+  },
+  {
+   "src": "/work/mise/15-waiter-floor-map.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Waiter floor map",
+   "caption": "Waiter floor map with table states (empty, new order, in kitchen)."
+  },
+  {
+   "src": "/work/mise/16-host-waitlist.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Host waitlist",
+   "caption": "Host view walk-in waitlist with four waiting parties and seat, left, cancel actions."
+  },
+  {
+   "src": "/work/mise/17-host-floor-map.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Host floor map",
+   "caption": "Host floor map grouped by zone with party size, seated time and order total on occupied tables."
+  },
+  {
+   "src": "/work/mise/01-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Guest QR menu",
+   "caption": "The guest menu on a phone, reached by scanning the table QR code: light, dark and mains."
+  },
+  {
    "src": "/work/mise/01-hero.webp",
    "w": 2400,
    "h": 1500,
@@ -142,6 +311,15 @@
  ],
  "scentwell": [
   {
+   "src": "/work/scentwell/walkthrough.mp4",
+   "poster": "/work/scentwell/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "Onboarding, the swipe deck, the Scent DNA profile and the light theme."
+  },
+  {
    "src": "/work/scentwell/01-app.webp",
    "w": 2400,
    "h": 1500,
@@ -153,55 +331,28 @@
    "w": 2400,
    "h": 1500,
    "title": "Taste onboarding",
-   "caption": "Vibe, notes and when you wear it. Each answer shapes the deck."
+   "caption": "Vibe, experience level and perfumes you love. Each answer shapes the deck."
   },
   {
-   "src": "/work/scentwell/03-deck.webp",
-   "w": 900,
-   "h": 1957,
-   "title": "Swipe deck",
-   "caption": "One recommendation at a time, with a tap for details.",
-   "phone": true
+   "src": "/work/scentwell/03-scents.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Scents and dislikes",
+   "caption": "Pick the scent families you like, then push down the ones you cannot stand."
   },
   {
-   "src": "/work/scentwell/04-scent-dna.webp",
-   "w": 900,
-   "h": 1957,
-   "title": "Scent DNA",
-   "caption": "A running breakdown of what you like, by note family.",
-   "phone": true
+   "src": "/work/scentwell/04-light.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Light theme",
+   "caption": "The same flow in the light theme."
   },
   {
-   "src": "/work/scentwell/05-perfume-picker.webp",
-   "w": 900,
-   "h": 1957,
-   "title": "Pick perfumes you love",
-   "caption": "Matching real bottles is the fastest way to calibrate.",
-   "phone": true
-  },
-  {
-   "src": "/work/scentwell/06-fragrance-world.webp",
-   "w": 900,
-   "h": 1957,
-   "title": "Your fragrance world",
-   "caption": "Experience level and budget.",
-   "phone": true
-  },
-  {
-   "src": "/work/scentwell/07-scents.webp",
-   "w": 900,
-   "h": 1957,
-   "title": "Which scents do you like?",
-   "caption": "Scent families with plain-language descriptions.",
-   "phone": true
-  },
-  {
-   "src": "/work/scentwell/08-dislikes.webp",
-   "w": 900,
-   "h": 1957,
-   "title": "Anything you can't stand?",
-   "caption": "Dislikes push scents down the deck, nothing is banned.",
-   "phone": true
+   "src": "/work/scentwell/05-themes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Dark and light",
+   "caption": "The swipe deck in both themes, and the locked state before onboarding is done."
   },
   {
    "src": "/work/scentwell/09-architecture.webp",
@@ -221,6 +372,22 @@
   }
  ],
  "saudi-research-agent": [
+  {
+   "src": "/work/saudi-research-agent/hero.webp",
+   "w": 2400,
+   "h": 1350,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/saudi-research-agent/cover.webp",
+   "w": 1600,
+   "h": 1200,
+   "title": "Cover",
+   "caption": "",
+   "cover": true
+  },
   {
    "src": "/work/saudi-research-agent/01-terminal.webp",
    "w": 2400,
@@ -247,6 +414,22 @@
  ],
  "voice-agents": [
   {
+   "src": "/work/voice-agents/hero.webp",
+   "w": 2400,
+   "h": 1350,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/voice-agents/cover.webp",
+   "w": 1600,
+   "h": 1200,
+   "title": "Cover",
+   "caption": "",
+   "cover": true
+  },
+  {
    "src": "/work/voice-agents/01-flow.webp",
    "w": 2400,
    "h": 1500,
@@ -264,6 +447,22 @@
   }
  ],
  "erp": [
+  {
+   "src": "/work/erp/hero.webp",
+   "w": 2400,
+   "h": 1350,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/erp/cover.webp",
+   "w": 1600,
+   "h": 1200,
+   "title": "Cover",
+   "caption": "",
+   "cover": true
+  },
   {
    "src": "/work/erp/01-modules.webp",
    "w": 2400,
@@ -283,6 +482,107 @@
  ],
  "voice-platform": [
   {
+   "src": "/work/voice-platform/hero.webp",
+   "w": 2400,
+   "h": 844,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/voice-platform/walkthrough.mp4",
+   "poster": "/work/voice-platform/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "A short silent walkthrough of the product."
+  },
+  {
+   "src": "/work/voice-platform/01-login.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Login",
+   "caption": "Sign-in screen with email and password fields and a Create an account button."
+  },
+  {
+   "src": "/work/voice-platform/02-dashboard-overview.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Dashboard overview",
+   "caption": "Dashboard with today's calls, average call length, success rate, active agents, live ongoing and queued counts, and calls by status."
+  },
+  {
+   "src": "/work/voice-platform/03-live-calls.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Live calls",
+   "caption": "Live page listing four agent instances by team, three ongoing calls with running durations, and two queued calls."
+  },
+  {
+   "src": "/work/voice-platform/04-call-logs.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Call logs",
+   "caption": "Call Logs table with assistant, customer number, type, ended reason, success evaluation, sentiment and start time columns."
+  },
+  {
+   "src": "/work/voice-platform/05-call-detail.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Call detail",
+   "caption": "Call details side panel with the cost badge, recording player and the agent and caller transcript."
+  },
+  {
+   "src": "/work/voice-platform/06-agents.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Agents",
+   "caption": "Agents page grouped by role (Receptionist, Debt collector, Sales, Other) with call counts, success rate and average handling time per agent."
+  },
+  {
+   "src": "/work/voice-platform/07-agent-detail.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Agent detail",
+   "caption": "Detail page for the agent Raya Reception with status, totals and the configuration form (model, temperature, tone)."
+  },
+  {
+   "src": "/work/voice-platform/08-analytics.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Analytics",
+   "caption": "Analytics overview with summary figures and a daily call volume bar chart for the last 7 days."
+  },
+  {
+   "src": "/work/voice-platform/09-analytics-agents.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Analytics agents",
+   "caption": "Analytics Agents tab with per-role metrics and the instance table."
+  },
+  {
+   "src": "/work/voice-platform/10-usage-billing.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Usage billing",
+   "caption": "Usage page with current period call minutes, calls made and active agents."
+  },
+  {
+   "src": "/work/voice-platform/11-settings.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Settings",
+   "caption": "Settings page with profile, security link, notification preferences and theme toggle."
+  },
+  {
+   "src": "/work/voice-platform/12-security.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Security",
+   "caption": "Security page with password form, MFA toggle and security overview."
+  },
+  {
    "src": "/work/voice-platform/01-architecture.webp",
    "w": 2400,
    "h": 1500,
@@ -300,6 +600,22 @@
   }
  ],
  "arabic-sentiment": [
+  {
+   "src": "/work/arabic-sentiment/hero.webp",
+   "w": 2400,
+   "h": 1350,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/arabic-sentiment/cover.webp",
+   "w": 1600,
+   "h": 1200,
+   "title": "Cover",
+   "caption": "",
+   "cover": true
+  },
   {
    "src": "/work/arabic-sentiment/01-pipeline.webp",
    "w": 2400,
@@ -319,6 +635,100 @@
  ],
  "athar": [
   {
+   "src": "/work/athar/hero.webp",
+   "w": 2400,
+   "h": 844,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/athar/walkthrough.mp4",
+   "poster": "/work/athar/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "A short silent walkthrough of the product."
+  },
+  {
+   "src": "/work/athar/01-landing-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Landing ar",
+   "caption": "Arabic landing page hero with the sign-up and login buttons, regulator and Vision 2030 badges."
+  },
+  {
+   "src": "/work/athar/02-login-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Login ar",
+   "caption": "Arabic login form with Saudi phone prefix and password field."
+  },
+  {
+   "src": "/work/athar/03-kyc-basic-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kyc basic ar",
+   "caption": "Basic information onboarding step (investor type, experience, education, occupation), answered."
+  },
+  {
+   "src": "/work/athar/04-kyc-financial-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kyc financial ar",
+   "caption": "Financial information onboarding step (net worth, holdings, goals, income, investment amounts), answered."
+  },
+  {
+   "src": "/work/athar/05-opportunities-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Opportunities ar",
+   "caption": "Arabic investment opportunities list with four demo opportunity cards."
+  },
+  {
+   "src": "/work/athar/06-opportunity-detail-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Opportunity detail ar",
+   "caption": "Full Arabic opportunity detail page with size panel, SDG tiles, financial details and risks."
+  },
+  {
+   "src": "/work/athar/07-investor-panel-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Investor panel ar",
+   "caption": "Arabic investor panel table showing the submitted questionnaire as pending."
+  },
+  {
+   "src": "/work/athar/08-landing-en.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Landing en",
+   "caption": "English LTR landing page hero."
+  },
+  {
+   "src": "/work/athar/09-opportunities-en.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Opportunities en",
+   "caption": "English investment opportunities list."
+  },
+  {
+   "src": "/work/athar/10-opportunity-detail-en.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Opportunity detail en",
+   "caption": "English opportunity detail page for the demo solar fund."
+  },
+  {
+   "src": "/work/athar/11-investor-panel-en.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Investor panel en",
+   "caption": "English investor panel with the pending submission."
+  },
+  {
    "src": "/work/athar/01-onboarding.webp",
    "w": 2400,
    "h": 1500,
@@ -336,6 +746,51 @@
   }
  ],
  "turf-booking": [
+  {
+   "src": "/work/turf-booking/hero.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/turf-booking/walkthrough.mp4",
+   "poster": "/work/turf-booking/walkthrough-poster.webp",
+   "w": 780,
+   "h": 1688,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "A short silent walkthrough of the product."
+  },
+  {
+   "src": "/work/turf-booking/01-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Onboarding sport, Search turfs, Home football",
+   "caption": ""
+  },
+  {
+   "src": "/work/turf-booking/02-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Turf detail, Slot picker, Booking summary",
+   "caption": ""
+  },
+  {
+   "src": "/work/turf-booking/03-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Payment methods, Ready to pay, My bookings upcoming",
+   "caption": ""
+  },
+  {
+   "src": "/work/turf-booking/04-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "My bookings past, Booking detail, Profile",
+   "caption": ""
+  },
   {
    "src": "/work/turf-booking/01-architecture.webp",
    "w": 2400,
@@ -355,6 +810,22 @@
  ],
  "mri-to-ct": [
   {
+   "src": "/work/mri-to-ct/hero.webp",
+   "w": 2400,
+   "h": 1350,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/mri-to-ct/cover.webp",
+   "w": 1600,
+   "h": 1200,
+   "title": "Cover",
+   "caption": "",
+   "cover": true
+  },
+  {
    "src": "/work/mri-to-ct/01-model.webp",
    "w": 2400,
    "h": 1500,
@@ -373,6 +844,22 @@
  ],
  "gesture-mouse": [
   {
+   "src": "/work/gesture-mouse/hero.webp",
+   "w": 2400,
+   "h": 1350,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/gesture-mouse/cover.webp",
+   "w": 1600,
+   "h": 1200,
+   "title": "Cover",
+   "caption": "",
+   "cover": true
+  },
+  {
    "src": "/work/gesture-mouse/01-pipeline.webp",
    "w": 2400,
    "h": 1500,
@@ -387,6 +874,95 @@
    "title": "Gestures",
    "caption": "Core gesture set.",
    "illustration": true
+  }
+ ],
+ "archonomic": [
+  {
+   "src": "/work/archonomic/hero.webp",
+   "w": 2400,
+   "h": 844,
+   "title": "Hero",
+   "caption": "",
+   "hero": true
+  },
+  {
+   "src": "/work/archonomic/walkthrough.mp4",
+   "poster": "/work/archonomic/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "Home, the portfolio listing and a project page."
+  },
+  {
+   "src": "/work/archonomic/01-home.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Home",
+   "caption": "Full-bleed opening with a script headline over architectural photography."
+  },
+  {
+   "src": "/work/archonomic/02-featured.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Home, featured work",
+   "caption": "Featured projects and the client strip."
+  },
+  {
+   "src": "/work/archonomic/03-portfolio.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Portfolio",
+   "caption": "A split hero with animated headline and a parallax image."
+  },
+  {
+   "src": "/work/archonomic/04-browse.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Browse by type",
+   "caption": "Every project as a card, filterable by category."
+  },
+  {
+   "src": "/work/archonomic/05-project.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Project page",
+   "caption": "Full-bleed hero with the title set over the photograph."
+  },
+  {
+   "src": "/work/archonomic/06-story.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Project story",
+   "caption": "Story, process and challenges, in the studio's own voice."
+  },
+  {
+   "src": "/work/archonomic/07-gallery.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Project gallery",
+   "caption": "A large featured image with a thumbnail strip and a lightbox."
+  },
+  {
+   "src": "/work/archonomic/08-services.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Services",
+   "caption": "Seven services, each with its own imagery."
+  },
+  {
+   "src": "/work/archonomic/09-about.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "About",
+   "caption": "The studio, its principal architect and its approach."
+  },
+  {
+   "src": "/work/archonomic/10-contact.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Contact",
+   "caption": "A single enquiry form with visible labels."
   }
  ]
 }

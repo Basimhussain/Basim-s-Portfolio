@@ -9,7 +9,7 @@ const homeLinks = [
 ];
 
 const subLinks = [
-  { name: "All work", href: "/work", id: "work", hideOnMobile: false },
+  { name: "All work", href: "/#work", id: "work", hideOnMobile: false },
   { name: "Contact", href: "/#contact", id: "contact", hideOnMobile: false },
 ];
 
