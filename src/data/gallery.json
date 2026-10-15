@@ -1,0 +1,392 @@
+{
+ "amc-estimator": [
+  {
+   "src": "/work/amc-estimator/01-hero-english.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "English home page",
+   "caption": "Smart AMC Estimator sits beside the hero, so a visitor can price maintenance without leaving the page."
+  },
+  {
+   "src": "/work/amc-estimator/02-estimator-quote.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Instant quote",
+   "caption": "The estimate appears instantly. The form below sends it to the sales team."
+  },
+  {
+   "src": "/work/amc-estimator/03-hero-arabic.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Arabic home page",
+   "caption": "Full right-to-left layout. The estimator moves to the other side with it."
+  },
+  {
+   "src": "/work/amc-estimator/04-estimator-quote-arabic.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Instant quote in Arabic",
+   "caption": "Same flow and same result, in Arabic."
+  },
+  {
+   "src": "/work/amc-estimator/05-services.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Services",
+   "caption": "Fire fighting, fire alarm, MEP and maintenance."
+  },
+  {
+   "src": "/work/amc-estimator/06-projects.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Project portfolio",
+   "caption": "Filterable project library with categories and counts."
+  },
+  {
+   "src": "/work/amc-estimator/07-salamah.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Salamah",
+   "caption": "Safety and compliance section."
+  },
+  {
+   "src": "/work/amc-estimator/08-quote-form.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Request a quote",
+   "caption": "Quote request form feeding the sales team."
+  },
+  {
+   "src": "/work/amc-estimator/09-full-english.webp",
+   "w": 1500,
+   "h": 7087,
+   "title": "Full page, English",
+   "caption": "The whole home page, top to bottom.",
+   "tall": true
+  },
+  {
+   "src": "/work/amc-estimator/10-full-arabic.webp",
+   "w": 1500,
+   "h": 7142,
+   "title": "Full page, Arabic",
+   "caption": "The whole home page in Arabic.",
+   "tall": true
+  }
+ ],
+ "mise": [
+  {
+   "src": "/work/mise/01-hero.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Home",
+   "caption": "Live covers, kitchen pass and service clock, shown as the product sees them."
+  },
+  {
+   "src": "/work/mise/02-kitchen-and-floor.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen and floor",
+   "caption": "Live kitchen display with station tags and elapsed timers."
+  },
+  {
+   "src": "/work/mise/03-features.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Features",
+   "caption": "QR ordering, kitchen display, reservations, floor plan."
+  },
+  {
+   "src": "/work/mise/04-venues.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Venues",
+   "caption": "Built for restaurants, cafes and lounges."
+  },
+  {
+   "src": "/work/mise/05-dark-mode.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Dark mode",
+   "caption": "Full dark theme."
+  },
+  {
+   "src": "/work/mise/06-arabic.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Arabic",
+   "caption": "Right-to-left Arabic across the whole product."
+  },
+  {
+   "src": "/work/mise/07-login.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Sign in",
+   "caption": "Staff and owner sign in."
+  },
+  {
+   "src": "/work/mise/08-full-light.webp",
+   "w": 1500,
+   "h": 10635,
+   "title": "Full page, light",
+   "caption": "The whole home page.",
+   "tall": true
+  },
+  {
+   "src": "/work/mise/09-full-dark.webp",
+   "w": 1500,
+   "h": 10635,
+   "title": "Full page, dark",
+   "caption": "The whole home page in dark mode.",
+   "tall": true
+  }
+ ],
+ "scentwell": [
+  {
+   "src": "/work/scentwell/01-app.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "The app",
+   "caption": "Scent DNA profile, swipe deck and the perfume picker."
+  },
+  {
+   "src": "/work/scentwell/02-onboarding.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Taste onboarding",
+   "caption": "Vibe, notes and when you wear it. Each answer shapes the deck."
+  },
+  {
+   "src": "/work/scentwell/03-deck.webp",
+   "w": 900,
+   "h": 1957,
+   "title": "Swipe deck",
+   "caption": "One recommendation at a time, with a tap for details.",
+   "phone": true
+  },
+  {
+   "src": "/work/scentwell/04-scent-dna.webp",
+   "w": 900,
+   "h": 1957,
+   "title": "Scent DNA",
+   "caption": "A running breakdown of what you like, by note family.",
+   "phone": true
+  },
+  {
+   "src": "/work/scentwell/05-perfume-picker.webp",
+   "w": 900,
+   "h": 1957,
+   "title": "Pick perfumes you love",
+   "caption": "Matching real bottles is the fastest way to calibrate.",
+   "phone": true
+  },
+  {
+   "src": "/work/scentwell/06-fragrance-world.webp",
+   "w": 900,
+   "h": 1957,
+   "title": "Your fragrance world",
+   "caption": "Experience level and budget.",
+   "phone": true
+  },
+  {
+   "src": "/work/scentwell/07-scents.webp",
+   "w": 900,
+   "h": 1957,
+   "title": "Which scents do you like?",
+   "caption": "Scent families with plain-language descriptions.",
+   "phone": true
+  },
+  {
+   "src": "/work/scentwell/08-dislikes.webp",
+   "w": 900,
+   "h": 1957,
+   "title": "Anything you can't stand?",
+   "caption": "Dislikes push scents down the deck, nothing is banned.",
+   "phone": true
+  },
+  {
+   "src": "/work/scentwell/09-architecture.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "How it answers",
+   "caption": "Retrieval, agent and evaluation.",
+   "illustration": true
+  },
+  {
+   "src": "/work/scentwell/10-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Evaluation scores.",
+   "illustration": true
+  }
+ ],
+ "saudi-research-agent": [
+  {
+   "src": "/work/saudi-research-agent/01-terminal.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Live run",
+   "caption": "A question in, a tool call for live Tadawul data, a structured report out with citations and caveats."
+  },
+  {
+   "src": "/work/saudi-research-agent/02-flow.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "How it works",
+   "caption": "From question to cited report.",
+   "illustration": true
+  },
+  {
+   "src": "/work/saudi-research-agent/03-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Run time and tool count.",
+   "illustration": true
+  }
+ ],
+ "voice-agents": [
+  {
+   "src": "/work/voice-agents/01-flow.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "How it works",
+   "caption": "Three flows: live enquiries, WhatsApp replies and quotation drafting.",
+   "illustration": true
+  },
+  {
+   "src": "/work/voice-agents/02-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Results measured after deployment.",
+   "illustration": true
+  }
+ ],
+ "erp": [
+  {
+   "src": "/work/erp/01-modules.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Modules",
+   "caption": "Five business areas on one system.",
+   "illustration": true
+  },
+  {
+   "src": "/work/erp/02-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Scope and rollout.",
+   "illustration": true
+  }
+ ],
+ "voice-platform": [
+  {
+   "src": "/work/voice-platform/01-architecture.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Architecture",
+   "caption": "Call path, live dashboard and the evaluation gate.",
+   "illustration": true
+  },
+  {
+   "src": "/work/voice-platform/02-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Design target and evaluation scores.",
+   "illustration": true
+  }
+ ],
+ "arabic-sentiment": [
+  {
+   "src": "/work/arabic-sentiment/01-pipeline.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Pipeline",
+   "caption": "From raw tweets to a monitored endpoint.",
+   "illustration": true
+  },
+  {
+   "src": "/work/arabic-sentiment/02-results.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Result",
+   "caption": "Macro F1 before and after.",
+   "illustration": true
+  }
+ ],
+ "athar": [
+  {
+   "src": "/work/athar/01-onboarding.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Onboarding and platform",
+   "caption": "KYC flow and the stack behind it.",
+   "illustration": true
+  },
+  {
+   "src": "/work/athar/02-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Delivery summary.",
+   "illustration": true
+  }
+ ],
+ "turf-booking": [
+  {
+   "src": "/work/turf-booking/01-architecture.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Architecture",
+   "caption": "Booking path and supporting services.",
+   "illustration": true
+  },
+  {
+   "src": "/work/turf-booking/02-outcomes.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Outcomes",
+   "caption": "Usage and reliability.",
+   "illustration": true
+  }
+ ],
+ "mri-to-ct": [
+  {
+   "src": "/work/mri-to-ct/01-model.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Model",
+   "caption": "Conditional GAN for image-to-image translation.",
+   "illustration": true
+  },
+  {
+   "src": "/work/mri-to-ct/02-recognition.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Recognition",
+   "caption": "Final-year project award.",
+   "illustration": true
+  }
+ ],
+ "gesture-mouse": [
+  {
+   "src": "/work/gesture-mouse/01-pipeline.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "How it works",
+   "caption": "Camera to cursor, with audio feedback.",
+   "illustration": true
+  },
+  {
+   "src": "/work/gesture-mouse/02-gestures.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Gestures",
+   "caption": "Core gesture set.",
+   "illustration": true
+  }
+ ]
+}

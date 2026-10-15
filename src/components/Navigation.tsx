@@ -1,13 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
-const links = [
-  { name: "Work", id: "work", hideOnMobile: false },
-  { name: "Experience", id: "experience", hideOnMobile: true },
-  { name: "Tools", id: "tools", hideOnMobile: true },
-  { name: "Contact", id: "contact", hideOnMobile: false },
+const homeLinks = [
+  { name: "Work", href: "#work", id: "work", hideOnMobile: false },
+  { name: "Experience", href: "#experience", id: "experience", hideOnMobile: true },
+  { name: "Tools", href: "#tools", id: "tools", hideOnMobile: true },
+  { name: "Contact", href: "#contact", id: "contact", hideOnMobile: false },
 ];
 
-const Navigation = () => {
+const subLinks = [
+  { name: "All work", href: "/work", id: "work", hideOnMobile: false },
+  { name: "Contact", href: "/#contact", id: "contact", hideOnMobile: false },
+];
+
+const Navigation = ({ variant = "home" }: { variant?: "home" | "sub" }) => {
+  const links = variant === "home" ? homeLinks : subLinks;
   const [active, setActive] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const bar = useRef<HTMLDivElement>(null);
@@ -35,11 +42,11 @@ const Navigation = () => {
     };
   }, []);
 
-  // Marks the section sitting around the upper third of the viewport.
+  // Marks the section sitting around the upper third of the viewport (home only).
   useEffect(() => {
-    const ids = links.map((l) => l.id);
-    const els = ids
-      .map((id) => document.getElementById(id))
+    if (variant !== "home") return;
+    const els = homeLinks
+      .map((l) => document.getElementById(l.id))
       .filter(Boolean) as HTMLElement[];
     const io = new IntersectionObserver(
       (entries) => {
@@ -56,7 +63,7 @@ const Navigation = () => {
       io.disconnect();
       window.removeEventListener("scroll", top);
     };
-  }, []);
+  }, [variant]);
 
   return (
     <header
@@ -68,21 +75,36 @@ const Navigation = () => {
         aria-label="Main"
         className="mx-auto max-w-6xl px-5 md:px-8 h-14 flex items-center justify-between"
       >
-        <a href="#top" className="font-semibold text-ink tracking-tight">
-          Basim Hussain
-        </a>
+        {variant === "home" ? (
+          <a href="#top" className="font-semibold text-ink tracking-tight">
+            Basim Hussain
+          </a>
+        ) : (
+          <Link href="/" className="font-semibold text-ink tracking-tight">
+            Basim Hussain
+          </Link>
+        )}
         <ul className="flex items-center gap-6 text-sm">
           {links.map((l) => (
-            <li key={l.id} className={l.hideOnMobile ? "hidden sm:block" : ""}>
-              <a
-                href={`#${l.id}`}
-                aria-current={active === l.id ? "true" : undefined}
-                className={`transition-colors ${
-                  active === l.id ? "text-ink" : "text-muted hover:text-ink"
-                }`}
-              >
-                {l.name}
-              </a>
+            <li key={l.name} className={l.hideOnMobile ? "hidden sm:block" : ""}>
+              {variant === "home" ? (
+                <a
+                  href={l.href}
+                  aria-current={active === l.id ? "true" : undefined}
+                  className={`transition-colors ${
+                    active === l.id ? "text-ink" : "text-muted hover:text-ink"
+                  }`}
+                >
+                  {l.name}
+                </a>
+              ) : (
+                <Link
+                  href={l.href}
+                  className="text-muted hover:text-ink transition-colors"
+                >
+                  {l.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -90,7 +112,7 @@ const Navigation = () => {
       <div
         ref={bar}
         aria-hidden
-        className="absolute left-0 bottom-[-1px] h-px w-full origin-left bg-accent"
+        className="absolute left-0 bottom-[-1px] h-px w-full origin-left bg-pine"
         style={{ transform: "scaleX(0)" }}
       />
     </header>
