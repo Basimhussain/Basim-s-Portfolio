@@ -100,6 +100,15 @@
    "hero": true
   },
   {
+   "src": "/work/mise/walkthrough.mp4",
+   "poster": "/work/mise/walkthrough-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "A short silent walkthrough of the product."
+  },
+  {
    "src": "/work/mise/marketing-site.mp4",
    "poster": "/work/mise/marketing-site-poster.webp",
    "w": 1280,
@@ -107,6 +116,132 @@
    "video": true,
    "title": "Marketing site walkthrough",
    "caption": "The live product widgets, the story sections, the features page and the Arabic view."
+  },
+  {
+   "src": "/work/mise/01-owner-dashboard.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner dashboard",
+   "caption": "Owner console overview, light, English. Week stats (orders, average order value, occupancy) and revenue line chart."
+  },
+  {
+   "src": "/work/mise/02-owner-reservations.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner reservations",
+   "caption": "Reservations panel for today with guest, party size, status, source, table and confirmation code."
+  },
+  {
+   "src": "/work/mise/03-owner-floor-plan.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner floor plan",
+   "caption": "Floor plan editor for the Main Hall zone with placed tables and decor tools."
+  },
+  {
+   "src": "/work/mise/04-owner-attendance.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner attendance",
+   "caption": "Attendance and payroll panel with hours per staff member."
+  },
+  {
+   "src": "/work/mise/05-owner-analytics-dark.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner analytics dark",
+   "caption": "Same analytics dashboard in dark mode."
+  },
+  {
+   "src": "/work/mise/06-owner-ai-forecast.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner ai forecast",
+   "caption": "Forecast panel with 14 day revenue projection and staffing recommendation table."
+  },
+  {
+   "src": "/work/mise/07-owner-feedback.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner feedback",
+   "caption": "Guest feedback list with star ratings per category and comments."
+  },
+  {
+   "src": "/work/mise/08-owner-dashboard-ar-dark.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner dashboard ar dark",
+   "caption": "Owner overview Arabic, dark mode."
+  },
+  {
+   "src": "/work/mise/09-owner-reservations-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner reservations ar",
+   "caption": "Reservations panel, Arabic right to left."
+  },
+  {
+   "src": "/work/mise/10-owner-floor-plan-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Owner floor plan ar",
+   "caption": "Floor plan editor, Arabic right to left, Lounge zone."
+  },
+  {
+   "src": "/work/mise/11-kitchen-display-all-stations.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display all stations",
+   "caption": "Kitchen display with eight tickets across hot, cold and bar items in sent, cooking and ready states."
+  },
+  {
+   "src": "/work/mise/12-kitchen-display-bar-station.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display bar station",
+   "caption": "Kitchen display filtered to the Bar station."
+  },
+  {
+   "src": "/work/mise/13-kitchen-display-dark.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display dark",
+   "caption": "Kitchen display, dark mode."
+  },
+  {
+   "src": "/work/mise/14-kitchen-display-ar.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Kitchen display ar",
+   "caption": "Kitchen display, Arabic right to left."
+  },
+  {
+   "src": "/work/mise/15-waiter-floor-map.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Waiter floor map",
+   "caption": "Waiter floor map with table states (empty, new order, in kitchen)."
+  },
+  {
+   "src": "/work/mise/16-host-waitlist.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Host waitlist",
+   "caption": "Host view walk-in waitlist with four waiting parties and seat, left, cancel actions."
+  },
+  {
+   "src": "/work/mise/17-host-floor-map.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Host floor map",
+   "caption": "Host floor map grouped by zone with party size, seated time and order total on occupied tables."
+  },
+  {
+   "src": "/work/mise/01-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Guest QR menu",
+   "caption": "The guest menu on a phone, reached by scanning the table QR code: light, dark and mains."
   },
   {
    "src": "/work/mise/01-hero.webp",
@@ -614,18 +749,47 @@
   {
    "src": "/work/turf-booking/hero.webp",
    "w": 2400,
-   "h": 1350,
+   "h": 1500,
    "title": "Hero",
    "caption": "",
    "hero": true
   },
   {
-   "src": "/work/turf-booking/cover.webp",
-   "w": 1600,
-   "h": 1200,
-   "title": "Cover",
-   "caption": "",
-   "cover": true
+   "src": "/work/turf-booking/walkthrough.mp4",
+   "poster": "/work/turf-booking/walkthrough-poster.webp",
+   "w": 780,
+   "h": 1688,
+   "video": true,
+   "title": "Walkthrough",
+   "caption": "A short silent walkthrough of the product."
+  },
+  {
+   "src": "/work/turf-booking/01-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Onboarding sport, Search turfs, Home football",
+   "caption": ""
+  },
+  {
+   "src": "/work/turf-booking/02-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Turf detail, Slot picker, Booking summary",
+   "caption": ""
+  },
+  {
+   "src": "/work/turf-booking/03-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "Payment methods, Ready to pay, My bookings upcoming",
+   "caption": ""
+  },
+  {
+   "src": "/work/turf-booking/04-screens.webp",
+   "w": 2400,
+   "h": 1500,
+   "title": "My bookings past, Booking detail, Profile",
+   "caption": ""
   },
   {
    "src": "/work/turf-booking/01-architecture.webp",

@@ -192,7 +192,7 @@ const WalkthroughVideo = ({ video }: { video: Project["videos"][number] }) => {
           playsInline
           controls
           preload="none"
-          className="h-full w-full object-cover"
+          className={`h-full w-full ${video.h > video.w ? "object-contain bg-night" : "object-cover"}`}
           aria-label={video.title}
         />
       </div>
