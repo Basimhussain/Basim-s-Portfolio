@@ -16,24 +16,27 @@ const SmoothScroll = () => {
     };
     raf = requestAnimationFrame(loop);
 
-    // Lenis takes over scrolling, so in-page anchors have to go through it.
+    // Lenis takes over scrolling, so same-page anchors have to go through it.
+    // Capture phase, so the router never sees the click and does not also jump.
     const onClick = (e: MouseEvent) => {
-      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>(
-        'a[href^="#"]'
-      );
+      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>("a[href]");
       if (!a) return;
-      const href = a.getAttribute("href");
-      if (!href || href === "#") return;
-      const target = href === "#top" ? 0 : document.querySelector(href);
+      const raw = a.getAttribute("href") ?? "";
+      let hash = "";
+      if (raw.startsWith("#")) hash = raw;
+      else if (raw.startsWith("/#") && window.location.pathname === "/") hash = raw.slice(1);
+      if (!hash || hash === "#") return;
+      const target = hash === "#top" ? 0 : document.querySelector(hash);
       if (target === null) return;
       e.preventDefault();
-      lenis.scrollTo(target as HTMLElement | number, { offset: -56 });
+      e.stopPropagation();
+      lenis.scrollTo(target as HTMLElement | number, { offset: -24 });
     };
-    document.addEventListener("click", onClick);
+    document.addEventListener("click", onClick, true);
 
     return () => {
       cancelAnimationFrame(raf);
-      document.removeEventListener("click", onClick);
+      document.removeEventListener("click", onClick, true);
       lenis.destroy();
     };
   }, []);

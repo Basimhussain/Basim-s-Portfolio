@@ -1,85 +1,435 @@
+/* Local fonts, served from bundled assets to avoid render-blocking Google Fonts requests */
+
+/* The display stack used to lead with Perpetua, which ships with Microsoft
+   Office and nothing else, so the headings rendered in Perpetua on Windows,
+   Times New Roman on macOS, and a generic serif on Linux and Android. Perpetua
+   is Monotype-licensed and cannot be self-hosted, so the stack now leads with
+   Cormorant Garamond, which was already the intended fallback, is OFL, and is
+   the closest free match to Perpetua's contrast and chiselled serifs. */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-300-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-300-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Cormorant Garamond has no 200, so the one extralight italic ("Detail" in
+   AboutVision) resolves here instead of being synthetically obliqued. */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 200 300;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-300-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 200 300;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-300-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: swap;
+  src: url('/fonts/readex-pro-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: swap;
+  src: url('/fonts/readex-pro-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Mrs Saint Delafield';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/mrs-saint-delafield-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Mrs Saint Delafield';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/mrs-saint-delafield-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-padding-top: 4.5rem;
+@layer base {
+  :root {
+    /* Archonomic palette */
+    --background: 0 0% 5%;            /* Deep black */
+    --foreground: 40 25% 94%;         /* Soft white */
+
+    --card: 0 0% 7%;
+    --card-foreground: 40 25% 94%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 25% 94%;
+
+    --primary: 40 47% 57%;            /* Mustard #C6A75E */
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 25% 94%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 40 10% 65%;
+
+    --accent: 40 47% 57%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 25% 94%;
+
+    --border: 40 10% 18%;
+    --input: 40 10% 18%;
+    --ring: 40 47% 57%;
+
+    /* Two steps and nothing between. 8px is anything you put a finger on;
+       16px is anything that contains other things. The same absolute radius
+       reads differently at different sizes, which is why one value does not
+       work across a 40px input and a 640px tile. Pills and circles use
+       rounded-full and are a separate intent, not a third step. */
+    --radius: 0.5rem;
+    --radius-container: 1rem;
+
+    --mustard: 40 47% 57%;
+    --soft-white: 40 25% 94%;
+    /* Raised one step off the page black so the bar reads as a card. Was near
+       white to carry the old raster logos, which had their own white plates
+       baked in; the vector set is white-on-transparent and needs the dark. */
+    --client-logo-bar: #121212;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 40 25% 94%;
+    --sidebar-primary: 40 47% 57%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 40 25% 94%;
+    --sidebar-border: 40 10% 18%;
+    --sidebar-ring: 40 47% 57%;
+  }
+
 }
 
-body {
-  background: #eef0ee;
-  color: #11161b;
-  -webkit-font-smoothing: antialiased;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Lenis smooth scroll */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
 }
 
-::selection {
-  background: #c9ddd8;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #0d3b36;
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-/* Lenis recommended base rules */
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-/* Data on the project plates draws in once, when the plate scrolls into view */
-.bar {
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition-delay: var(--d, 0s);
-}
-.wave i {
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition-delay: var(--d, 0s);
-}
-[data-in="1"] .bar,
-[data-in="1"] .wave i {
-  transform: none;
-}
-
-/* The one orchestrated moment: the hero settling in on load */
-@keyframes settle {
-  from {
+@layer utilities {
+  /* This utility wins over the Tailwind fontFamily.display token, so the stack
+     has to be corrected here too or the config change does nothing. Perpetua
+     Titling MT led before, which is a caps-only titling face: on Windows with
+     Office it took every heading including the mixed-case ones. Both Perpetua
+     entries now sit behind the self-hosted webfont as load-failure fallbacks. */
+  .font-display {
+    font-family: 'Cormorant Garamond', 'Perpetua Titling MT', 'Perpetua', 'Times New Roman', serif;
+  }
+  .font-body {
+    font-family: 'Readex Pro', system-ui, sans-serif;
+  }
+  .font-script {
+    font-family: 'Cloudy Arora Script', 'Mrs Saint Delafield', 'Allura', cursive;
+  }
+  .tracking-luxury {
+    letter-spacing: 0.32em;
+  }
+  /* The reticle cursor stands in for the native pointer, but only once the
+     component has confirmed a fine pointer and no reduced-motion preference.
+     Text fields keep their caret target. */
+  .reticle-cursor,
+  .reticle-cursor * {
+    cursor: none;
+  }
+  .reticle-cursor input,
+  .reticle-cursor textarea,
+  .reticle-cursor select,
+  .reticle-cursor [contenteditable="true"] {
+    cursor: auto;
+  }
+  /* Film grain over the hero photo. Inline turbulence rather than a tiled PNG so
+     it costs nothing on the network and stays crisp at any DPR. */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 200px 200px;
+    background-repeat: repeat;
+  }
+  .reveal {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(28px);
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  to {
+  .reveal.in-view {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
   }
-}
-.intro > * {
-  animation: settle 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
-}
-.intro > *:nth-child(1) { animation-delay: 0.05s; }
-.intro > *:nth-child(2) { animation-delay: 0.18s; }
-.intro > *:nth-child(3) { animation-delay: 0.32s; }
-.intro > *:nth-child(4) { animation-delay: 0.46s; }
-.intro > *:nth-child(5) { animation-delay: 0.6s; }
 
-@media (prefers-reduced-motion: reduce) {
-  .intro > * {
-    animation: none;
+  /* Creative signature-style entrance for the hero "Design" script */
+  @keyframes design-draw {
+    0% {
+      opacity: 0;
+      transform: translateY(40px) rotate(-8deg) scale(0.8);
+      filter: blur(14px);
+      letter-spacing: 0.4em;
+    }
+    40% {
+      opacity: 1;
+      filter: blur(4px);
+    }
+    70% {
+      transform: translateY(-4px) rotate(1deg) scale(1.02);
+      letter-spacing: 0.02em;
+      filter: blur(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotate(0) scale(1);
+      filter: blur(0);
+      letter-spacing: normal;
+    }
   }
-  .bar,
-  .wave i {
-    transform: none;
-    transition: none;
+  @keyframes design-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .animate-design-entrance {
+    display: inline-block;
+    padding: 0.15em 0.25em 0.15em 0.15em;
+    margin: -0.15em -0.25em -0.15em -0.15em;
+    overflow: visible;
+    transform-origin: left bottom;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--soft-white)) 0%,
+      hsl(var(--soft-white)) 35%,
+      hsl(var(--mustard)) 50%,
+      hsl(var(--soft-white)) 65%,
+      hsl(var(--soft-white)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:
+      design-draw 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both,
+      design-shimmer 3.2s ease-in-out 2s infinite;
+  }
+  /* Slow camera push on the hero photograph, always inward, restarting without
+     a visible snap. One element cannot do this: to get back to the start scale
+     it has to travel there, which is either a zoom-out or a jump cut. So the
+     hero stacks two copies running the same 30s cycle half a cycle apart. Each
+     is visible for 15s while it pushes 1.15 to 1.30, then dissolves out, and
+     resets to 1.15 during the 15s it spends at opacity 0. The seam lands inside
+     a ~1s dissolve, which reads as a film cut rather than a glitch.
+
+     Timing is linear, not eased: a camera push runs at constant rate, and
+     ease-in-out is what made the earlier version feel springy. */
+  @keyframes hero-pan {
+    0%   { transform: scale(1.15); opacity: 0; }
+    3%   { transform: scale(1.159); opacity: 1; }
+    47%  { transform: scale(1.291); opacity: 1; }
+    50%  { transform: scale(1.30); opacity: 0; }
+    100% { transform: scale(1.30); opacity: 0; }
+  }
+  .animate-hero-pan {
+    animation: hero-pan 30s linear infinite;
+    will-change: transform, opacity;
+  }
+  /* Negative delay starts the second copy mid-cycle, so it is already 15s in on
+     the first frame and there is no dark gap before the first dissolve. */
+  .animate-hero-pan-offset {
+    animation-delay: -15s;
+  }
+
+  @keyframes build-reveal {
+    0% { opacity: 0; transform: translateY(20px); clip-path: inset(0 100% 0 0); }
+    100% { opacity: 1; transform: translateY(0); clip-path: inset(0 0 0 0); }
+  }
+  .animate-build-reveal {
+    display: inline-block;
+    animation: build-reveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 1.3s both;
+  }
+  .hover-underline {
+    position: relative;
+  }
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hover-underline:hover::after,
+  .hover-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  @keyframes slide-up {
+    0% { transform: translateY(110%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  /* ---------- Luxury cursor-tracking border glow ---------- */
+  .glow-card {
+    position: relative;
+    isolation: isolate;
+    --mx: 50%;
+    --my: 50%;
+  }
+  .glow-card::before,
+  .glow-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 0;
+  }
+  .glow-card::before {
+    background: radial-gradient(
+      260px circle at var(--mx) var(--my),
+      hsla(40, 55%, 78%, 0.18),
+      hsla(40, 40%, 88%, 0.06) 35%,
+      transparent 70%
+    );
+  }
+  .glow-card::after {
+    padding: 1px;
+    background: radial-gradient(
+      300px circle at var(--mx) var(--my),
+      hsla(40, 75%, 78%, 0.85),
+      hsla(40, 50%, 92%, 0.35) 25%,
+      hsla(40, 30%, 80%, 0.08) 55%,
+      transparent 75%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+  }
+  .glow-card:hover::before,
+  .glow-card:hover::after {
+    opacity: 1;
+  }
+  /* The enquiry confirmation lights its own panel and keeps it lit, with the
+     source sitting under the status dot. Everywhere else the lamp needs a
+     pointer; here the room is already lit for you. Touch and keyboard reach
+     this state too, which hover alone never gave them. */
+  .glow-card.is-lit {
+    --mx: 14%;
+    --my: 16%;
+  }
+  .glow-card.is-lit::before,
+  .glow-card.is-lit::after {
+    opacity: 1;
+  }
+  /* Reduced motion keeps the fade and drops the travel. The arrival still
+     registers, nothing slides across the screen, and state changes that carry
+     meaning (hover, focus, the form's success swap) stay legible. A blanket
+     animation kill would take those with it. */
+  @media (prefers-reduced-motion: reduce) {
+    .glow-card::before,
+    .glow-card::after { transition: none; }
+
+    .reveal {
+      transform: none;
+      transition: opacity 0.4s ease;
+    }
+    .reveal.in-view { transform: none; }
+
+    /* A continuously moving background is the clearest case for this query, so
+       the hero holds still at its resting scale and the second copy, which only
+       exists to hide the reset, is dropped entirely. */
+    .animate-hero-pan {
+      animation: none;
+      will-change: auto;
+      opacity: 1;
+    }
+    .animate-hero-pan-offset {
+      display: none;
+    }
+
+    @keyframes slide-up {
+      0% { transform: none; opacity: 0; }
+      100% { transform: none; opacity: 1; }
+    }
   }
 }

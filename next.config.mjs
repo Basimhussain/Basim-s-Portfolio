@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    domains: [],
+  async redirects() {
+    return [{ source: "/work", destination: "/#work", permanent: false }];
   },
 };
 
