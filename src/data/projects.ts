@@ -9,6 +9,10 @@ export interface GalleryItem {
   tall?: boolean;
   phone?: boolean;
   illustration?: boolean;
+  hero?: boolean;
+  cover?: boolean;
+  video?: boolean;
+  poster?: string;
 }
 
 export interface Project {
@@ -32,6 +36,8 @@ export interface Project {
   /** Real screenshots when true, overview diagrams when false. */
   screens: boolean;
   img: string;
+  hero: string;
+  videos: GalleryItem[];
   items: GalleryItem[];
 }
 
@@ -42,7 +48,7 @@ export const categories = [
   { key: "research", label: "Models & Research" },
 ] as const;
 
-type Def = Omit<Project, "items" | "img" | "category">;
+type Def = Omit<Project, "items" | "img" | "category" | "hero" | "videos">;
 
 const g = gallery as Record<string, GalleryItem[]>;
 
@@ -124,6 +130,37 @@ const defs: Def[] = [
     year: "2026",
     scope: "Vue.js, Node.js, Express",
     links: [{ label: "Visit bocsmart.com", href: "https://bocsmart.com" }],
+    screens: true,
+  },
+  {
+    slug: "archonomic",
+    catKey: "platforms",
+    title: "Archonomic Design Studio",
+    description:
+      "A cinematic portfolio and enquiry site for an architecture and interiors studio in Riyadh.",
+    lead: "A site where the photography carries the argument.",
+    intro:
+      "Archonomic is an architecture, interiors and fit-out studio in Riyadh. The site presents completed work across seven categories, with a filterable portfolio, full-screen project pages and three separate enquiry paths for general contact, villa commissions and careers.",
+    details: [
+      "Portfolio filtered by seven categories, with a 3D sphere that links to every project.",
+      "Project pages with story, process, challenges and a gallery with lightbox.",
+      "Three enquiry forms, each handled by its own Supabase edge function.",
+      "Film grain, line reveals and slow motion that never bounce.",
+    ],
+    facts: [
+      { label: "Portfolio categories", value: "7" },
+      { label: "Services presented", value: "7" },
+      { label: "Enquiry paths", value: "3" },
+    ],
+    process: [
+      { title: "Arrive", text: "A full-bleed opening with a script headline over photography." },
+      { title: "Browse", text: "Filter the portfolio by type, or drag the project sphere." },
+      { title: "Study", text: "Open a project for its story, process and gallery." },
+      { title: "Enquire", text: "Send a message, a villa brief or a job application." },
+    ],
+    location: "Archonomic Design Studio, Riyadh",
+    scope: "React, Vite, Tailwind CSS, Framer Motion, Three.js, Supabase",
+    links: [],
     screens: true,
   },
   {
@@ -480,10 +517,20 @@ const defs: Def[] = [
 const labelOf = (key: string) => categories.find((c) => c.key === key)!.label;
 
 export const projects: Project[] = defs.map((d) => {
-  const items = g[d.slug] ?? [];
-  const cover =
-    items.find((i) => !i.illustration && !i.phone && !i.tall) ?? items[0];
-  return { ...d, category: labelOf(d.catKey), items, img: cover?.src ?? "" };
+  const all = g[d.slug] ?? [];
+  const items = all.filter((i) => !i.hero && !i.video && !i.cover);
+  const videos = all.filter((i) => i.video);
+  const coverItem = all.find((i) => i.cover);
+  const cover = coverItem ?? items.find((i) => !i.illustration && !i.phone && !i.tall) ?? items[0];
+  const heroItem = all.find((i) => i.hero);
+  return {
+    ...d,
+    category: labelOf(d.catKey),
+    items,
+    videos,
+    img: cover?.src ?? "",
+    hero: heroItem?.src ?? cover?.src ?? "",
+  };
 });
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

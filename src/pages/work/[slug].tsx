@@ -154,6 +154,55 @@ const FloorGallery = ({
   );
 };
 
+/** Silent walkthrough. Plays when it scrolls into view, with controls for anyone who wants them. */
+const WalkthroughVideo = ({ video }: { video: Project["videos"][number] }) => {
+  const head = useInView<HTMLDivElement>(0.25);
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) el.play().catch(() => {});
+        else el.pause();
+      },
+      { threshold: 0.5 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div ref={head.ref}>
+      <div className="mb-6 md:mb-8 group/heading inline-block cursor-default">
+        <h2 className="font-display text-3xl md:text-5xl font-light text-mustard inline-block">
+          <LineReveal text={video.title} inView={head.inView} duration={1} />
+        </h2>
+        <div className="mt-3 h-px w-24 bg-mustard transition-all duration-500 group-hover/heading:w-full" />
+      </div>
+      <div className="relative overflow-hidden bg-secondary aspect-[16/10]">
+        <video
+          ref={ref}
+          src={video.src}
+          poster={video.poster}
+          muted
+          loop
+          playsInline
+          controls
+          preload="none"
+          className="h-full w-full object-cover"
+          aria-label={video.title}
+        />
+      </div>
+      {video.caption && (
+        <p className="mt-4 text-sm font-light text-soft-white/60 max-w-xl">{video.caption}</p>
+      )}
+    </div>
+  );
+};
+
 interface Props {
   project: Project;
   next: { slug: string; title: string; category: string };
@@ -263,7 +312,7 @@ const ProjectDetail = ({ project, next }: Props) => {
 
       {/* Full-bleed hero */}
       <section className="relative h-[100svh] w-full overflow-hidden">
-        <img src={project.img} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={project.hero} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/10 to-background" />
         <HeroIntro category={project.category} title={project.title} tagline={project.description} />
       </section>
@@ -340,6 +389,14 @@ const ProjectDetail = ({ project, next }: Props) => {
       )}
 
       <ProjectBody project={project} />
+
+      {project.videos.length > 0 && (
+        <section className="container pb-16 md:pb-24 space-y-12">
+          {project.videos.map((v) => (
+            <WalkthroughVideo key={v.src} video={v} />
+          ))}
+        </section>
+      )}
 
       {sections.map((section, idx) => (
         <section
