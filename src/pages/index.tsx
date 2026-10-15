@@ -74,9 +74,6 @@ const Home = () => (
             Download CV
           </a>
         </div>
-        <p className="mt-10 text-sm text-muted">
-          Available immediately. Transferable Iqama.
-        </p>
       </section>
 
       <ProjectListing />
