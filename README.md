@@ -1,6 +1,6 @@
 # Basim Hussain, portfolio
 
-Single-page portfolio built with Next.js 14 (pages router), TypeScript and Tailwind CSS. All content lives in `src/pages/index.tsx` and follows the current CV.
+Single-page portfolio, projects first, built with Next.js 14 (pages router), TypeScript and Tailwind CSS. All content lives in `src/pages/index.tsx` and follows the current CV.
 
 ## Run locally
 

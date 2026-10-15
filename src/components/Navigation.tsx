@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const links = [
+  { name: "Work", id: "work", hideOnMobile: false },
   { name: "Experience", id: "experience", hideOnMobile: true },
-  { name: "Projects", id: "projects", hideOnMobile: true },
-  { name: "Skills", id: "skills", hideOnMobile: true },
+  { name: "Tools", id: "tools", hideOnMobile: true },
   { name: "Contact", id: "contact", hideOnMobile: false },
 ];
 
@@ -37,7 +37,7 @@ const Navigation = () => {
 
   // Marks the section sitting around the upper third of the viewport.
   useEffect(() => {
-    const ids = [...links.map((l) => l.id), "education"];
+    const ids = links.map((l) => l.id);
     const els = ids
       .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];
@@ -60,13 +60,13 @@ const Navigation = () => {
 
   return (
     <header
-      className={`sticky top-0 z-20 bg-paper/90 backdrop-blur border-b transition-colors duration-300 ${
+      className={`sticky top-0 z-20 bg-chalk/90 backdrop-blur border-b transition-colors duration-300 ${
         scrolled ? "border-line" : "border-transparent"
       }`}
     >
       <nav
         aria-label="Main"
-        className="mx-auto max-w-4xl px-5 md:px-8 h-14 flex items-center justify-between"
+        className="mx-auto max-w-6xl px-5 md:px-8 h-14 flex items-center justify-between"
       >
         <a href="#top" className="font-semibold text-ink tracking-tight">
           Basim Hussain

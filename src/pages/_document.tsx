@@ -10,7 +10,7 @@ export default function Document() {
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
         <meta name="author" content="Basim Hussain" />
-        <meta name="theme-color" content="#fafaf8" />
+        <meta name="theme-color" content="#eef0ee" />
 
         <meta property="og:type" content="website" />
         <meta
@@ -27,7 +27,7 @@ export default function Document() {
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Reem+Kufi:wght@500&display=swap"
         />
       </Head>
       <body>
