@@ -1,24 +1,13 @@
 {
   "name": "basim-portfolio",
-  "version": "1.0.0",
-  "description": "Basim Hussain's personal portfolio - A galaxy-themed showcase of full-stack development and ML projects",
-  "author": "Basim Hussain <your-email@example.com>",
-  "homepage": "https://github.com/Basimhussain/portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio site for Basim Hussain, AI Engineer",
+  "author": "Basim Hussain <basimhussain001@gmail.com>",
+  "homepage": "https://basim-s-portfolio.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Basimhussain/portfolio.git"
+    "url": "https://github.com/Basimhussain/Basim-s-Portfolio.git"
   },
-  "keywords": [
-    "portfolio",
-    "nextjs",
-    "typescript",
-    "tailwindcss",
-    "react",
-    "full-stack",
-    "machine-learning",
-    "glassmorphism",
-    "galaxy-theme"
-  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -27,17 +16,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "framer-motion": "^12.16.0",
-    "gsap": "^3.13.0",
-    "lenis": "^1.3.23",
-    "locomotive-scroll": "^4.1.4",
-    "lottie-react": "^2.4.1",
+    "lenis": "^1.3.26",
     "next": "14.2.3",
     "react": "^18.3.1",
-    "react-dom": "^18",
-    "react-intersection-observer": "^9.16.0",
-    "react-simple-typewriter": "^5.0.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,54 +1,44 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Lenis from "lenis";
 
-interface SmoothScrollProps {
-  children: React.ReactNode;
-}
-
-const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
-  const lenisRef = useRef<Lenis | null>(null);
-
+// Inertial scrolling for the whole page. Skipped for reduced-motion users,
+// who keep the browser's native scroll.
+const SmoothScroll = () => {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.15,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.5,
-    });
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    lenisRef.current = lenis;
+    const lenis = new Lenis({ duration: 1.15, smoothWheel: true });
 
-    let rafId: number;
-    function raf(time: number) {
+    let raf = 0;
+    const loop = (time: number) => {
       lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-    rafId = requestAnimationFrame(raf);
-
-    // Anchor handler — let lenis own smooth in-page anchors
-    const handleAnchor = (e: MouseEvent) => {
-      const target = (e.target as HTMLElement | null)?.closest(
-        'a[href^="#"]'
-      ) as HTMLAnchorElement | null;
-      if (!target) return;
-      const id = target.getAttribute("href");
-      if (!id || id === "#") return;
-      const el = document.querySelector(id);
-      if (!el) return;
-      e.preventDefault();
-      lenis.scrollTo(el as HTMLElement, { offset: -80, duration: 1.4 });
+      raf = requestAnimationFrame(loop);
     };
-    document.addEventListener("click", handleAnchor);
+    raf = requestAnimationFrame(loop);
+
+    // Lenis takes over scrolling, so in-page anchors have to go through it.
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>(
+        'a[href^="#"]'
+      );
+      if (!a) return;
+      const href = a.getAttribute("href");
+      if (!href || href === "#") return;
+      const target = href === "#top" ? 0 : document.querySelector(href);
+      if (target === null) return;
+      e.preventDefault();
+      lenis.scrollTo(target as HTMLElement | number, { offset: -56 });
+    };
+    document.addEventListener("click", onClick);
 
     return () => {
-      cancelAnimationFrame(rafId);
+      cancelAnimationFrame(raf);
+      document.removeEventListener("click", onClick);
       lenis.destroy();
-      document.removeEventListener("click", handleAnchor);
     };
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default SmoothScroll;
