@@ -1,60 +1,33 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+const description =
+  "Basim Hussain is an AI Engineer in Riyadh building LLM and voice agents, RAG pipelines and bilingual Arabic and English products.";
+
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="Basim Hussain - Software Engineer specializing in Full-Stack Development, Machine Learning, and Modern Web Technologies. Explore my galaxy-themed portfolio showcasing innovative projects and technical expertise."
-        />
-        <meta
-          name="keywords"
-          content="Basim Hussain, Software Engineer, Full Stack Developer, Machine Learning, React, Next.js, TypeScript, Portfolio, MERN Stack, Python, TensorFlow"
-        />
+        <meta name="description" content={description} />
         <meta name="author" content="Basim Hussain" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#fafaf8" />
 
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Basim Hussain - Software Engineer Portfolio"
+          content="Basim Hussain | AI Engineer, Riyadh"
         />
-        <meta
-          property="og:description"
-          content="Explore my galaxy-themed portfolio showcasing full-stack development and machine learning projects."
-        />
-        <meta property="og:url" content="https://your-portfolio-domain.com" />
-        <meta property="og:site_name" content="Basim Hussain Portfolio" />
+        <meta property="og:description" content={description} />
 
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:title"
-          content="Basim Hussain - Software Engineer Portfolio"
-        />
-        <meta
-          property="twitter:description"
-          content="Explore my galaxy-themed portfolio showcasing full-stack development and machine learning projects."
-        />
-        <meta property="twitter:creator" content="@basimhussain" />
-
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
-
-        {/* Theme Color */}
-        <meta name="theme-color" content="#6366f1" />
-        <meta name="msapplication-TileColor" content="#6366f1" />
-
-        {/* Preload fonts for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap"
         />
       </Head>
       <body>
