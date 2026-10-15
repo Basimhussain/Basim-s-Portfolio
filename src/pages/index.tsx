@@ -95,6 +95,7 @@ const more = [
     text: "A multi-tenant restaurant operations platform.",
     stack: "Fastify, PostgreSQL, Redis",
     meta: "Personal project",
+    href: "https://mise-beta-test.vercel.app/",
   },
 ];
 
