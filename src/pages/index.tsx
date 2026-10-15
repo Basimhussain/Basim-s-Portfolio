@@ -287,7 +287,7 @@ const Home = () => (
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/basim-hussain"
+                href="https://www.linkedin.com/in/basim-hussain-097702354/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={linkClass}
